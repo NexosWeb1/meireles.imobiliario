@@ -87,14 +87,9 @@
   /* ---------------------------------------------
      Cabeçalho
   --------------------------------------------- */
-  var lastY = window.pageYOffset;
+  // O menu permanece sempre visível (exigência do escopo)
   function onScroll() {
-    var y = window.pageYOffset;
-    header.classList.toggle('is-scrolled', y > 30);
-    if (!document.body.classList.contains('menu-open')) {
-      header.classList.toggle('is-hidden', y > lastY && y > 500);
-    }
-    lastY = y;
+    header.classList.toggle('is-scrolled', window.pageYOffset > 30);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -115,7 +110,6 @@
     document.body.classList.toggle('menu-open', open);
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-    header.classList.remove('is-hidden');
     if (lenis) open ? lenis.stop() : lenis.start();
   });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
