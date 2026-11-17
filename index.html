@@ -143,6 +143,7 @@
       </div>
     </div>
   </header>
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
 
   <main id="conteudo">
 
@@ -205,22 +206,17 @@
     <!-- 02 SOBRE NÓS -->
     <section class="section about" id="sobre">
       <div class="container">
-        <div class="about__intro">
-          <div class="about__badge" data-reveal>
+        <header class="about__intro" data-reveal>
+          <div class="about__badge">
             <span class="about__corner about__corner--tl" aria-hidden="true"></span>
             <span class="about__corner about__corner--br" aria-hidden="true"></span>
             <svg class="about__badge-mark" aria-hidden="true"><use href="#i-logo"/></svg>
-            <p class="about__badge-text">Consultoria<br>Comercial em<br>Mobiliário</p>
+            <p class="about__badge-text">Consultoria Comercial<br>em Mobiliário</p>
           </div>
-          <div class="about__heading" data-reveal>
-            <p class="eyebrow">Sobre nós</p>
-            <h2 class="title">Conheça a Meireles Mobiliário</h2>
-          </div>
-          <div class="about__lead" data-reveal>
-            <p>A <strong>Meireles Mobiliário</strong> nasce com o propósito de aproximar empresas e profissionais de soluções em mobiliário que valorizam ambientes e contribuem para o sucesso de seus negócios.</p>
-            <a href="#consultoria" class="link-arrow">Como funciona nossa consultoria <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          </div>
-        </div>
+          <p class="eyebrow">Sobre nós</p>
+          <h2 class="title">Conheça a Meireles Mobiliário</h2>
+          <p class="about__lead">A <strong>Meireles Mobiliário</strong> nasce com o propósito de aproximar empresas e profissionais de soluções em mobiliário que valorizam ambientes e contribuem para o sucesso de seus negócios.</p>
+        </header>
 
         <div class="about__body">
           <div class="about__media">
@@ -233,21 +229,22 @@
           </div>
 
           <div class="about__text" data-stagger>
-            <div class="about__block">
+            <article class="about__block">
               <span class="about__num">01</span>
               <h3>Consultoria especializada</h3>
               <p>Atuamos com consultoria comercial especializada, buscando compreender as necessidades de cada cliente e apresentar opções de mobiliário que aliam qualidade, design e funcionalidade.</p>
-            </div>
-            <div class="about__block">
+            </article>
+            <article class="about__block">
               <span class="about__num">02</span>
               <h3>Conexão com a fábrica</h3>
               <p>Em parceria com a Marco Brum, conectamos nosso atendimento consultivo à experiência e ao portfólio de uma fabricante especializada em mobiliário para ambientes profissionais e comerciais.</p>
-            </div>
-            <div class="about__block">
+            </article>
+            <article class="about__block">
               <span class="about__num">03</span>
               <h3>Atendimento próximo</h3>
               <p>Mais do que apresentar produtos, buscamos entender cada projeto e proporcionar uma experiência de atendimento próxima, personalizada e orientada às necessidades de cada negócio.</p>
-            </div>
+            </article>
+            <a href="#consultoria" class="link-arrow">Como funciona nossa consultoria <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
 
@@ -279,59 +276,68 @@
           </div>
           <p class="section-head__text">Uma seleção do portfólio Marco Brum para compor ambientes profissionais com qualidade, conforto e identidade. Consulte a disponibilidade de cada linha com nossa equipe.</p>
         </div>
+      </div>
 
-        <div class="products__grid" data-stagger>
+      <div class="carousel" data-carousel>
+        <div class="carousel__track" tabindex="0" role="region" aria-label="Categorias de produtos, role para o lado para ver mais" data-stagger>
           <article class="product">
-            <img src="assets/img/prod-mesas.webp" alt="Mesa de madeira com cadeiras" width="700" height="960" loading="lazy" decoding="async">
+            <img src="assets/img/prod-mesas.webp" alt="Mesa de madeira com cadeiras" width="700" height="960" loading="lazy" decoding="async" draggable="false">
             <div class="product__body">
+              <span class="product__index">01</span>
               <h3 class="product__title">Mesas</h3>
               <p class="product__desc">Versatilidade, resistência e design para salões, varandas e áreas de convivência.</p>
               <a class="product__cta" data-wa="Olá! Gostaria de conhecer as opções de mesas disponíveis e receber mais informações." target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
             </div>
           </article>
           <article class="product">
-            <img src="assets/img/prod-bistros.webp" alt="Mesa bistrô redonda junto à janela de uma cafeteria" width="700" height="960" loading="lazy" decoding="async">
+            <img src="assets/img/prod-bistros.webp" alt="Mesa bistrô redonda junto à janela de uma cafeteria" width="700" height="960" loading="lazy" decoding="async" draggable="false">
             <div class="product__body">
+              <span class="product__index">02</span>
               <h3 class="product__title">Bistrôs</h3>
               <p class="product__desc">Peças práticas e elegantes que otimizam espaços e criam ambientes acolhedores.</p>
               <a class="product__cta" data-wa="Olá! Gostaria de conhecer as opções de bistrôs disponíveis e receber mais informações." target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
             </div>
           </article>
           <article class="product">
-            <img src="assets/img/prod-cadeiras.webp" alt="Cadeiras estofadas ao redor de mesa de jantar" width="700" height="960" loading="lazy" decoding="async">
+            <img src="assets/img/prod-cadeiras.webp" alt="Cadeiras estofadas ao redor de mesa de jantar" width="700" height="960" loading="lazy" decoding="async" draggable="false">
             <div class="product__body">
+              <span class="product__index">03</span>
               <h3 class="product__title">Cadeiras</h3>
               <p class="product__desc">Conforto, durabilidade e estilo em modelos para os mais diversos ambientes.</p>
               <a class="product__cta" data-wa="Olá! Gostaria de conhecer as opções de cadeiras disponíveis e receber mais informações." target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
             </div>
           </article>
           <article class="product">
-            <img src="assets/img/prod-importados.webp" alt="Poltrona estofada de linha importada" width="700" height="960" loading="lazy" decoding="async">
+            <img src="assets/img/prod-importados.webp" alt="Poltrona estofada de linha importada" width="700" height="960" loading="lazy" decoding="async" draggable="false">
             <div class="product__body">
+              <span class="product__index">04</span>
               <h3 class="product__title">Linha Importados</h3>
               <p class="product__desc">Design diferenciado e acabamentos exclusivos para projetos que pedem presença.</p>
               <a class="product__cta" data-wa="Olá! Gostaria de conhecer as opções da Linha Importados disponíveis e receber mais informações." target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
             </div>
           </article>
           <article class="product">
-            <img src="assets/img/prod-banquetas.webp" alt="Banqueta alta com assento preto e pés de madeira" width="700" height="960" loading="lazy" decoding="async">
+            <img src="assets/img/prod-banquetas.webp" alt="Banqueta alta com assento preto e pés de madeira" width="700" height="960" loading="lazy" decoding="async" draggable="false">
             <div class="product__body">
+              <span class="product__index">05</span>
               <h3 class="product__title">Banquetas</h3>
               <p class="product__desc">Funcionalidade e personalidade para balcões, bares e bancadas.</p>
               <a class="product__cta" data-wa="Olá! Gostaria de conhecer as opções de banquetas disponíveis e receber mais informações." target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
             </div>
           </article>
           <article class="product">
-            <img src="assets/img/prod-booths.webp" alt="Booth estofado em restaurante com plantas" width="700" height="960" loading="lazy" decoding="async">
+            <img src="assets/img/prod-booths.webp" alt="Booth estofado em restaurante com plantas" width="700" height="960" loading="lazy" decoding="async" draggable="false">
             <div class="product__body">
+              <span class="product__index">06</span>
               <h3 class="product__title">Booths</h3>
               <p class="product__desc">Estofados sob medida que aproveitam o espaço e ampliam o conforto dos clientes.</p>
               <a class="product__cta" data-wa="Olá! Gostaria de conhecer as opções de booths disponíveis e receber mais informações." target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
             </div>
           </article>
           <article class="product">
-            <img src="assets/img/prod-aparadores.webp" alt="Aparador rústico de madeira de demolição" width="700" height="960" loading="lazy" decoding="async">
+            <img src="assets/img/prod-aparadores.webp" alt="Aparador rústico de madeira de demolição" width="700" height="960" loading="lazy" decoding="async" draggable="false">
             <div class="product__body">
+              <span class="product__index">07</span>
               <h3 class="product__title">Demolição e Aparadores</h3>
               <p class="product__desc">Madeira com história, charme e identidade para ambientes marcantes.</p>
               <a class="product__cta" data-wa="Olá! Gostaria de conhecer as opções de móveis de demolição e aparadores disponíveis e receber mais informações." target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -345,6 +351,14 @@
               <a class="btn btn--gold btn--sm" data-wa="Olá! Gostaria de enviar meu projeto para receber uma orientação sobre o mobiliário." target="_blank" rel="noopener">Envie seu projeto <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
             </div>
           </article>
+        </div>
+
+        <div class="container carousel__ui">
+          <div class="carousel__bar" aria-hidden="true"><span class="carousel__progress"></span></div>
+          <div class="carousel__nav">
+            <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Categorias anteriores"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <button class="carousel__btn carousel__btn--next" type="button" aria-label="Próximas categorias"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
         </div>
       </div>
     </section>
@@ -360,39 +374,87 @@
           <p class="section-head__text">Cada negócio possui características e necessidades específicas. Por isso, apresentamos soluções em mobiliário que valorizam os ambientes, proporcionam funcionalidade e contribuem para a identidade de cada estabelecimento.</p>
         </div>
 
-        <div class="segments__grid" data-stagger>
-          <a class="segment segment--wide" data-wa="Olá! Tenho um restaurante ou churrascaria e gostaria de conhecer soluções em mobiliário." target="_blank" rel="noopener">
+        <div class="panels" data-panels data-reveal>
+          <article class="panel is-active" tabindex="0">
             <img src="assets/img/seg-restaurantes.webp" alt="Salão de restaurante com iluminação baixa" width="800" height="600" loading="lazy" decoding="async">
-            <span class="segment__label">Restaurantes e Churrascarias</span>
-          </a>
-          <a class="segment" data-wa="Olá! Tenho um bar ou pub e gostaria de conhecer soluções em mobiliário." target="_blank" rel="noopener">
+            <span class="panel__tab"><b>01</b>Restaurantes e Churrascarias</span>
+            <div class="panel__content">
+              <span class="panel__num">01</span>
+              <h3>Restaurantes e Churrascarias</h3>
+              <p>Mesas, cadeiras e booths que acolhem bem e acompanham o ritmo intenso do salão.</p>
+              <a class="panel__cta" data-wa="Olá! Tenho um restaurante ou churrascaria e gostaria de conhecer soluções em mobiliário." target="_blank" rel="noopener">Ver soluções para o meu negócio <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="panel" tabindex="0">
             <img src="assets/img/seg-bares.webp" alt="Balcão de bar com banquetas e iluminação quente" width="800" height="600" loading="lazy" decoding="async">
-            <span class="segment__label">Bares e Pubs</span>
-          </a>
-          <a class="segment" data-wa="Olá! Tenho uma cafeteria ou lanchonete e gostaria de conhecer soluções em mobiliário." target="_blank" rel="noopener">
+            <span class="panel__tab"><b>02</b>Bares e Pubs</span>
+            <div class="panel__content">
+              <span class="panel__num">02</span>
+              <h3>Bares e Pubs</h3>
+              <p>Banquetas e bistrôs com personalidade para balcões e ambientes de convivência.</p>
+              <a class="panel__cta" data-wa="Olá! Tenho um bar ou pub e gostaria de conhecer soluções em mobiliário." target="_blank" rel="noopener">Ver soluções para o meu negócio <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="panel" tabindex="0">
             <img src="assets/img/seg-cafeterias.webp" alt="Interior de cafeteria com mesas de madeira" width="800" height="600" loading="lazy" decoding="async">
-            <span class="segment__label">Cafeterias e Lanchonetes</span>
-          </a>
-          <a class="segment" data-wa="Olá! Tenho uma padaria ou pizzaria e gostaria de conhecer soluções em mobiliário." target="_blank" rel="noopener">
+            <span class="panel__tab"><b>03</b>Cafeterias e Lanchonetes</span>
+            <div class="panel__content">
+              <span class="panel__num">03</span>
+              <h3>Cafeterias e Lanchonetes</h3>
+              <p>Peças práticas e charmosas que otimizam o espaço e convidam o cliente a ficar.</p>
+              <a class="panel__cta" data-wa="Olá! Tenho uma cafeteria ou lanchonete e gostaria de conhecer soluções em mobiliário." target="_blank" rel="noopener">Ver soluções para o meu negócio <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="panel" tabindex="0">
             <img src="assets/img/seg-padarias.webp" alt="Balcão movimentado de padaria e café" width="800" height="600" loading="lazy" decoding="async">
-            <span class="segment__label">Padarias e Pizzarias</span>
-          </a>
-          <a class="segment segment--wide" data-wa="Olá! Tenho um hotel ou pousada e gostaria de conhecer soluções em mobiliário." target="_blank" rel="noopener">
+            <span class="panel__tab"><b>04</b>Padarias e Pizzarias</span>
+            <div class="panel__content">
+              <span class="panel__num">04</span>
+              <h3>Padarias e Pizzarias</h3>
+              <p>Mobiliário resistente e acolhedor para atendimento ágil e áreas de consumo.</p>
+              <a class="panel__cta" data-wa="Olá! Tenho uma padaria ou pizzaria e gostaria de conhecer soluções em mobiliário." target="_blank" rel="noopener">Ver soluções para o meu negócio <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="panel" tabindex="0">
             <img src="assets/img/seg-hoteis.webp" alt="Quarto de hotel com móveis de madeira" width="800" height="600" loading="lazy" decoding="async">
-            <span class="segment__label">Hotéis e Pousadas</span>
-          </a>
-          <a class="segment" data-wa="Olá! Gostaria de conhecer soluções em mobiliário para espaços corporativos." target="_blank" rel="noopener">
+            <span class="panel__tab"><b>05</b>Hotéis e Pousadas</span>
+            <div class="panel__content">
+              <span class="panel__num">05</span>
+              <h3>Hotéis e Pousadas</h3>
+              <p>Conforto e sofisticação para restaurantes, lobbies e áreas comuns.</p>
+              <a class="panel__cta" data-wa="Olá! Tenho um hotel ou pousada e gostaria de conhecer soluções em mobiliário." target="_blank" rel="noopener">Ver soluções para o meu negócio <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="panel" tabindex="0">
             <img src="assets/img/seg-corporativos.webp" alt="Escritório amplo com mesa de reunião" width="800" height="600" loading="lazy" decoding="async">
-            <span class="segment__label">Espaços Corporativos</span>
-          </a>
-          <a class="segment segment--wide" data-wa="Olá! Gostaria de conhecer soluções em mobiliário para ambientes comerciais." target="_blank" rel="noopener">
+            <span class="panel__tab"><b>06</b>Espaços Corporativos</span>
+            <div class="panel__content">
+              <span class="panel__num">06</span>
+              <h3>Espaços Corporativos</h3>
+              <p>Soluções funcionais para refeitórios, recepções e áreas de convivência.</p>
+              <a class="panel__cta" data-wa="Olá! Gostaria de conhecer soluções em mobiliário para espaços corporativos." target="_blank" rel="noopener">Ver soluções para o meu negócio <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="panel" tabindex="0">
             <img src="assets/img/seg-comerciais.webp" alt="Lounge comercial com poltronas e sofás" width="800" height="600" loading="lazy" decoding="async">
-            <span class="segment__label">Ambientes Comerciais</span>
-          </a>
-          <a class="segment segment--wide" data-wa="Olá! Sou arquiteto ou designer de interiores e gostaria de conhecer soluções em mobiliário para meus projetos." target="_blank" rel="noopener">
+            <span class="panel__tab"><b>07</b>Ambientes Comerciais</span>
+            <div class="panel__content">
+              <span class="panel__num">07</span>
+              <h3>Ambientes Comerciais</h3>
+              <p>Composições que valorizam a experiência do cliente e reforçam a identidade da marca.</p>
+              <a class="panel__cta" data-wa="Olá! Gostaria de conhecer soluções em mobiliário para ambientes comerciais." target="_blank" rel="noopener">Ver soluções para o meu negócio <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="panel" tabindex="0">
             <img src="assets/img/seg-arquitetura.webp" alt="Ambiente projetado com sofá, poltronas e mesa de centro" width="800" height="600" loading="lazy" decoding="async">
-            <span class="segment__label">Projetos de Arquitetura e Interiores</span>
-          </a>
+            <span class="panel__tab"><b>08</b>Arquitetura e Interiores</span>
+            <div class="panel__content">
+              <span class="panel__num">08</span>
+              <h3>Projetos de Arquitetura e Interiores</h3>
+              <p>Apoio a arquitetos e designers na especificação do mobiliário ideal para cada projeto.</p>
+              <a class="panel__cta" data-wa="Olá! Sou arquiteto ou designer de interiores e gostaria de conhecer soluções em mobiliário para meus projetos." target="_blank" rel="noopener">Ver soluções para o meu projeto <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -403,8 +465,8 @@
       <div class="container">
         <div class="consulting__top">
           <div class="consulting__intro" data-reveal>
-            <p class="eyebrow eyebrow--light">Consultoria comercial</p>
-            <h2 class="title title--light">Mais do que encontrar móveis, encontre as <em>soluções certas</em> para o seu negócio.</h2>
+            <p class="eyebrow consulting__eyebrow">Consultoria comercial</p>
+            <h2 class="title consulting__title">Mais do que encontrar móveis, encontre as <em>soluções certas</em> para o seu negócio.</h2>
             <p>Cada ambiente possui necessidades específicas. Nossa consultoria busca compreender as características do seu negócio, identificar suas necessidades e apresentar soluções em mobiliário alinhadas ao seu projeto.</p>
             <p>Por meio de um atendimento personalizado e da conexão com os produtos da Marco Brum, auxiliamos empresas e profissionais na escolha do mobiliário ideal, proporcionando acesso direto à fábrica e acompanhamento comercial durante o processo de aquisição.</p>
             <a class="btn btn--gold" data-wa="Olá! Gostaria de falar com um consultor da Meireles Mobiliário." target="_blank" rel="noopener">
@@ -416,7 +478,8 @@
           </figure>
         </div>
 
-        <ol class="steps" data-stagger>
+        <ol class="steps">
+          <li class="steps__line" aria-hidden="true"><span></span></li>
           <li class="step">
             <span class="step__icon"><svg aria-hidden="true"><use href="#i-listen"/></svg></span>
             <span class="step__num">Etapa 01</span>
@@ -573,31 +636,50 @@
 
   <!-- RODAPÉ -->
   <footer class="footer">
-    <div class="container footer__top">
-      <a href="#inicio" class="brand brand--footer" aria-label="Meireles Mobiliário, voltar ao início">
-        <svg class="brand__mark" aria-hidden="true"><use href="#i-logo"/></svg>
-        <span class="brand__words">
-          <span class="brand__name">Meireles</span>
-          <span class="brand__sub">Mobiliário</span>
-        </span>
-      </a>
-      <nav aria-label="Menu do rodapé">
-        <ul class="footer__nav">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#inicio" class="brand brand--footer" aria-label="Meireles Mobiliário, voltar ao início">
+          <svg class="brand__mark" aria-hidden="true"><use href="#i-logo"/></svg>
+          <span class="brand__words">
+            <span class="brand__name">Meireles</span>
+            <span class="brand__sub">Mobiliário</span>
+          </span>
+        </a>
+        <p class="footer__about">Consultoria comercial em mobiliário para empresas e profissionais, com atendimento em todo o território nacional.</p>
+        <div class="footer__partner">
+          <span>Em parceria com</span>
+          <span class="partner__logo partner__logo--sm"><span class="partner__logo-name">Marco Brum</span><span class="partner__logo-sub">Móveis</span></span>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Menu do rodapé">
+        <p class="footer__heading">Navegação</p>
+        <ul class="footer__links">
+          <li><a href="#inicio">Início</a></li>
           <li><a href="#sobre">Sobre Nós</a></li>
           <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#solucoes">Soluções</a></li>
+          <li><a href="#solucoes">Soluções por Segmento</a></li>
           <li><a href="#consultoria">Consultoria</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
-      <div class="footer__partner">
-        <span>Em parceria com</span>
-        <span class="partner__logo partner__logo--sm"><span class="partner__logo-name">Marco Brum</span><span class="partner__logo-sub">Móveis</span></span>
+
+      <div class="footer__col">
+        <p class="footer__heading">Fale conosco</p>
+        <ul class="footer__links footer__contacts">
+          <li><a data-wa="Olá! Vim pelo site da Meireles Mobiliário." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg><span data-contact-text="whatsapp">(31) 98761-9774</span></a></li>
+          <li><a href="mailto:gislainevendasmarcobrum@gmail.com" data-contact="email"><svg aria-hidden="true"><use href="#i-mail"/></svg><span data-contact-text="email">gislainevendasmarcobrum@gmail.com</span></a></li>
+          <li><a href="https://instagram.com/" target="_blank" rel="noopener" data-contact="instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg><span data-contact-text="instagram">Instagram</span></a></li>
+        </ul>
+        <a class="btn btn--gold btn--sm footer__cta" data-wa="Olá! Gostaria de solicitar um atendimento da Meireles Mobiliário." target="_blank" rel="noopener">Solicite atendimento <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
-    <div class="container footer__bottom">
-      <p>Consultoria Comercial em Mobiliário. Atendimento em todo o território nacional.</p>
-      <p>&copy; <span id="year">2026</span> Meireles Mobiliário. Todos os direitos reservados.</p>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; <span id="year">2026</span> Meireles Mobiliário. Todos os direitos reservados.</p>
+        <p>Consultoria Comercial em Mobiliário</p>
+      </div>
     </div>
   </footer>
 

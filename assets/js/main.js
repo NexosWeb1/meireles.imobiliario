@@ -45,7 +45,7 @@
   if (!CFG.location) missing.push('[data-contact-text="location"]');
   if (missing.length) {
     document.querySelectorAll(missing.join(',')).forEach(function (el) {
-      (el.closest('.contact__list li') || el).remove();
+      (el.closest('li') || el).remove();
     });
   }
 
@@ -123,6 +123,8 @@
     if (lenis) open ? lenis.stop() : lenis.start();
   });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+  var backdrop = document.getElementById('navBackdrop');
+  if (backdrop) backdrop.addEventListener('click', closeMenu);
   window.addEventListener('resize', function () { if (window.innerWidth > 1024) closeMenu(); });
 
   /* ---------------------------------------------
@@ -219,6 +221,117 @@
   document.addEventListener('visibilitychange', function () {
     if (document.hidden) clearInterval(timer); else restart();
   });
+
+  /* ---------------------------------------------
+     Carrossel de produtos
+  --------------------------------------------- */
+  document.querySelectorAll('[data-carousel]').forEach(function (car) {
+    var track = car.querySelector('.carousel__track');
+    var prev = car.querySelector('.carousel__btn--prev');
+    var next = car.querySelector('.carousel__btn--next');
+    var bar = car.querySelector('.carousel__progress');
+
+    function step() {
+      var card = track.querySelector('.product');
+      return card ? card.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 20) : track.clientWidth * 0.8;
+    }
+    function update() {
+      var max = track.scrollWidth - track.clientWidth;
+      var ratio = track.clientWidth / track.scrollWidth;
+      var p = max > 0 ? track.scrollLeft / max : 0;
+      bar.style.width = (ratio * 100) + '%';
+      bar.style.left = (p * (100 - ratio * 100)) + '%';
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= max - 2;
+    }
+    prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    window.addEventListener('load', update);
+    update();
+
+    // Arrastar com o mouse no desktop
+    var down = false, moved = false, startX = 0, startLeft = 0;
+    track.addEventListener('pointerdown', function (e) {
+      if (e.pointerType !== 'mouse' || e.button !== 0) return;
+      down = true; moved = false; startX = e.clientX; startLeft = track.scrollLeft;
+    });
+    window.addEventListener('pointermove', function (e) {
+      if (!down) return;
+      var dx = e.clientX - startX;
+      if (!moved && Math.abs(dx) > 6) { moved = true; track.classList.add('is-dragging'); }
+      if (moved) track.scrollLeft = startLeft - dx;
+    });
+    window.addEventListener('pointerup', function () {
+      if (!down) return;
+      down = false;
+      if (moved) {
+        track.classList.remove('is-dragging');
+        var st = step();
+        track.scrollTo({ left: Math.round(track.scrollLeft / st) * st, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* ---------------------------------------------
+     Painéis de segmentos
+  --------------------------------------------- */
+  var panelWrap = document.querySelector('[data-panels]');
+  if (panelWrap) {
+    var panels = Array.prototype.slice.call(panelWrap.querySelectorAll('.panel'));
+    var PANEL_DELAY = 6000;
+    var panelTimer = null;
+    var hovering = false;
+    var inView = false;
+    var canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    var isMobile = function () { return window.innerWidth <= 767; };
+
+    panels.forEach(function (panel) {
+      var t = document.createElement('span');
+      t.className = 'panel__timer';
+      t.setAttribute('aria-hidden', 'true');
+      panel.appendChild(t);
+    });
+    panelWrap.style.setProperty('--panel-delay', PANEL_DELAY + 'ms');
+
+    var schedule = function () {
+      clearTimeout(panelTimer);
+      panels.forEach(function (p) { p.querySelector('.panel__timer').classList.remove('is-running'); });
+      if (reduceMotion || hovering || !inView || isMobile()) return;
+      var active = panelWrap.querySelector('.panel.is-active .panel__timer');
+      void active.offsetWidth;
+      active.classList.add('is-running');
+      panelTimer = setTimeout(function () {
+        var i = panels.indexOf(panelWrap.querySelector('.panel.is-active'));
+        activatePanel((i + 1) % panels.length);
+      }, PANEL_DELAY);
+    };
+    var activatePanel = function (i) {
+      panels.forEach(function (p, k) { p.classList.toggle('is-active', k === i); });
+      schedule();
+    };
+
+    panels.forEach(function (panel, i) {
+      if (canHover) panel.addEventListener('mouseenter', function () { activatePanel(i); });
+      panel.addEventListener('click', function () { if (!panel.classList.contains('is-active')) activatePanel(i); });
+      panel.addEventListener('focus', function () { if (!panel.classList.contains('is-active')) activatePanel(i); });
+      panel.addEventListener('keydown', function (e) {
+        if (e.target !== panel) return;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); panels[(i + 1) % panels.length].focus(); }
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); panels[(i - 1 + panels.length) % panels.length].focus(); }
+      });
+    });
+    panelWrap.addEventListener('mouseenter', function () { hovering = true; schedule(); });
+    panelWrap.addEventListener('mouseleave', function () { hovering = false; schedule(); });
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        inView = entries[0].isIntersecting;
+        schedule();
+      }, { threshold: 0.4 }).observe(panelWrap);
+    }
+  }
 
   /* ---------------------------------------------
      Animações (GSAP + ScrollTrigger)
@@ -345,10 +458,33 @@
     scrollTrigger: { trigger: '.cta-band', start: 'top bottom', end: 'bottom top', scrub: true }
   });
 
-  // Ícones das etapas
-  gsap.from('.step__icon', {
-    scale: 0.4, rotate: -30, autoAlpha: 0, duration: 1, ease: 'back.out(1.8)', stagger: 0.15,
-    scrollTrigger: { trigger: '.steps', start: 'top 80%', once: true }
+  // Consultoria: as cores da seção mudam conforme o scroll
+  var consulting = document.querySelector('.consulting');
+  gsap.timeline({
+    scrollTrigger: { trigger: consulting, start: 'top 85%', end: 'bottom 35%', scrub: 0.6 }
+  })
+    .fromTo(consulting,
+      { '--bg': '#f4eee4', '--fg': '#244638', '--accent': '#79563D' },
+      { '--bg': '#244638', '--fg': '#faf7f1', '--accent': '#B99A62', duration: 1, ease: 'none' })
+    .to(consulting, { '--bg': '#10211a', duration: 1, ease: 'none' }, '+=0.8')
+    .to(consulting, { '--bg': '#4a3526', duration: 1, ease: 'none' }, '+=0.6');
+
+  // Etapas: linha de progresso e ativação em sequência
+  var steps = gsap.utils.toArray('.step');
+  gsap.from(steps, {
+    autoAlpha: 0, y: 50, duration: 1, ease: 'power3.out', stagger: 0.12,
+    scrollTrigger: { trigger: '.steps', start: 'top 82%', once: true }
+  });
+  gsap.fromTo('.steps__line span', { scaleX: 0 }, {
+    scaleX: 1, ease: 'none',
+    scrollTrigger: {
+      trigger: '.steps', start: 'top 75%', end: 'bottom 45%', scrub: 0.5,
+      onUpdate: function (self) {
+        steps.forEach(function (st, k) {
+          st.classList.toggle('is-on', self.progress >= (k + 0.5) / steps.length || self.progress > 0.98);
+        });
+      }
+    }
   });
 
   window.addEventListener('load', function () { window.ScrollTrigger.refresh(); });
