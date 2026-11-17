@@ -1,21 +1,22 @@
 /*
  * Configurações da Meireles Mobiliário
  * Altere apenas este arquivo para atualizar os contatos em todo o site.
- * ATENÇÃO: os valores abaixo são provisórios e devem ser substituídos pelos dados reais.
  */
 window.MEIRELES_CONFIG = {
   // WhatsApp comercial: apenas números, com DDI 55 e DDD
-  whatsapp: '5531999999999',
-  whatsappLabel: '(31) 9 9999-9999',
+  whatsapp: '5531987619774',
+  whatsappLabel: '(31) 98761-9774',
 
-  phone: '+553133333333',
-  phoneLabel: '(31) 3333-3333',
+  phone: '+5531987619774',
+  phoneLabel: '(31) 98761-9774',
 
-  email: 'contato@meirelesmobiliario.com.br',
+  email: 'gislainevendasmarcobrum@gmail.com',
 
-  instagramUser: 'meirelesmobiliario',
+  // Deixe vazio para ocultar o item no site
+  instagramUser: '',
 
-  location: 'Belo Horizonte, MG',
+  // Deixe vazio para ocultar o item no site
+  location: '',
 
   /*
    * Canal de recebimento do formulário.

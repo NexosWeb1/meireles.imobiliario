@@ -39,6 +39,16 @@
     if (txt) el.textContent = txt;
   });
 
+  // Oculta canais ainda não informados no config.js
+  var missing = [];
+  if (!CFG.instagramUser) missing.push('[data-contact="instagram"]');
+  if (!CFG.location) missing.push('[data-contact-text="location"]');
+  if (missing.length) {
+    document.querySelectorAll(missing.join(',')).forEach(function (el) {
+      (el.closest('.contact__list li') || el).remove();
+    });
+  }
+
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
