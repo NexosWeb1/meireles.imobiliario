@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meireles Mobiliário | Consultoria Comercial em Mobiliário</title>
+  <meta name="description" content="Consultoria comercial em mobiliário para restaurantes, bares, cafeterias, hotéis e ambientes profissionais. Atendimento consultivo e acesso direto à fábrica Marco Brum.">
+  <meta name="theme-color" content="#172e25">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Meireles Mobiliário | Consultoria Comercial em Mobiliário">
+  <meta property="og:description" content="Mobiliário que transforma espaços e valoriza negócios.">
+  <meta property="og:image" content="assets/img/hero-1.webp">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="assets/img/hero-1.webp" media="(min-width: 768px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/hero-1-m.webp" media="(max-width: 767px)" fetchpriority="high">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    document.documentElement.classList.add('js');
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('motion');
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Ícones -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-logo" viewBox="0 0 64 56">
+      <path d="M6 52V6l26 28L58 6v46" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="miter"/>
+      <path d="M18 52V30m28 22V30" fill="none" stroke="currentColor" stroke-width="3"/>
+      <path d="M0 52h64" fill="none" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.96L2 22l5.2-1.5A9.93 9.93 0 1 0 12.04 2Zm0 18.13a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.08.9.92-3-.2-.31a8.22 8.22 0 1 1 6.86 3.74Zm4.5-6.15c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.71-1.33.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3 2.74 2.74 0 0 0-.86 2.04 4.77 4.77 0 0 0 1 2.53 10.9 10.9 0 0 0 4.18 3.69c1.55.67 2.16.73 2.94.61.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.15-1.17-.06-.11-.22-.17-.47-.3Z"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="m3.5 6.5 8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    </symbol>
+    <symbol id="i-listen" viewBox="0 0 48 48">
+      <path d="M8 12h24a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H20l-8 6v-6H8a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4Z" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M40 18h2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-2v5l-6-5h-6" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M12 20h16m-16 6h10" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <symbol id="i-chair" viewBox="0 0 48 48">
+      <path d="M14 6h20v18H14zM10 24h28v6H10zM13 30l-2 13m24-13 2 13M18 30v8h12v-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-budget" viewBox="0 0 48 48">
+      <path d="M12 4h18l8 8v32H12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M30 4v8h8M18 22h14m-14 7h14m-14 7h9" fill="none" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <symbol id="i-handshake" viewBox="0 0 48 48">
+      <path d="M4 14h8l6 4h6l-8 7a3 3 0 0 0 4 4l7-5 11 10a2.5 2.5 0 0 1-3.5 3.5L31 34m3 3a2.5 2.5 0 0 1-3.5 3.5L27 37m3.5 3.5a2.5 2.5 0 0 1-3.5 3.5L22 40M44 14h-8l-6 3M4 32h6l6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M3 7h18M3 12h18M9 17h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="m5 5 14 14M19 5 5 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- CABEÇALHO -->
+  <header class="header" id="header">
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <p class="topbar__note">Atendimento em todo o território nacional</p>
+        <div class="topbar__contacts">
+          <a href="mailto:contato@meirelesmobiliario.com.br" data-contact="email">
+            <svg aria-hidden="true"><use href="#i-mail"/></svg>
+            <span data-contact-text="email">contato@meirelesmobiliario.com.br</span>
+          </a>
+          <a href="tel:+553133333333" data-contact="phone">
+            <svg aria-hidden="true"><use href="#i-phone"/></svg>
+            <span data-contact-text="phone">(31) 3333-3333</span>
+          </a>
+          <a href="https://instagram.com/meirelesmobiliario" target="_blank" rel="noopener" data-contact="instagram" aria-label="Instagram da Meireles Mobiliário">
+            <svg aria-hidden="true"><use href="#i-instagram"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar">
+      <div class="container navbar__inner">
+        <a href="#inicio" class="brand" aria-label="Meireles Mobiliário, ir para o início">
+          <svg class="brand__mark" aria-hidden="true"><use href="#i-logo"/></svg>
+          <span class="brand__words">
+            <span class="brand__name">Meireles</span>
+            <span class="brand__sub">Mobiliário</span>
+          </span>
+          <span class="brand__sign">Consultoria Comercial<br>em Mobiliário</span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Menu principal">
+          <ul class="nav__list">
+            <li><a href="#inicio" class="nav__link is-active">Início</a></li>
+            <li><a href="#sobre" class="nav__link">Sobre Nós</a></li>
+            <li><a href="#produtos" class="nav__link">Produtos</a></li>
+            <li><a href="#solucoes" class="nav__link">Soluções por Segmento</a></li>
+            <li><a href="#consultoria" class="nav__link">Consultoria</a></li>
+            <li><a href="#contato" class="nav__link">Contato</a></li>
+          </ul>
+          <a class="btn btn--gold nav__cta-mobile" data-wa="Olá! Vim pelo site da Meireles Mobiliário e gostaria de falar com um especialista." target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-whatsapp"/></svg> Fale no WhatsApp
+          </a>
+        </nav>
+
+        <a class="btn btn--gold btn--sm navbar__cta" data-wa="Olá! Vim pelo site da Meireles Mobiliário e gostaria de falar com um especialista." target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-whatsapp"/></svg> Fale no WhatsApp
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <svg class="menu-toggle__open" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="menu-toggle__close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- 01 HERO -->
+    <section class="hero" id="inicio" aria-label="Apresentação">
+      <div class="hero__slides" aria-hidden="true">
+        <picture class="hero__slide is-active">
+          <source media="(max-width: 767px)" srcset="assets/img/hero-1-m.webp">
+          <img src="assets/img/hero-1.webp" alt="" width="1680" height="1050" fetchpriority="high">
+        </picture>
+        <picture class="hero__slide">
+          <source media="(max-width: 767px)" data-srcset="assets/img/hero-2-m.webp">
+          <img data-src="assets/img/hero-2.webp" alt="" width="1680" height="1050">
+        </picture>
+        <picture class="hero__slide">
+          <source media="(max-width: 767px)" data-srcset="assets/img/hero-3-m.webp">
+          <img data-src="assets/img/hero-3.webp" alt="" width="1680" height="1050">
+        </picture>
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <svg class="hero__mark" data-hero aria-hidden="true"><use href="#i-logo"/></svg>
+        <p class="eyebrow eyebrow--light" data-hero>Consultoria Comercial em Mobiliário</p>
+        <h1 class="hero__title" data-split>Mobiliário que transforma espaços <em>e valoriza negócios.</em></h1>
+        <p class="hero__text" data-hero>Conectamos empresas e profissionais a soluções em mobiliário que unem qualidade, funcionalidade e design, com atendimento consultivo e acesso direto à fábrica Marco Brum.</p>
+        <div class="hero__actions" data-hero>
+          <a href="#produtos" class="btn btn--gold">Conheça nossas soluções <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost" data-wa="Olá! Vim pelo site da Meireles Mobiliário e gostaria de falar com um especialista." target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-whatsapp"/></svg> Fale com um especialista
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__dots" role="tablist" aria-label="Imagens de destaque">
+        <button class="hero__dot is-active" role="tab" aria-selected="true" aria-label="Imagem 1"></button>
+        <button class="hero__dot" role="tab" aria-selected="false" aria-label="Imagem 2"></button>
+        <button class="hero__dot" role="tab" aria-selected="false" aria-label="Imagem 3"></button>
+      </div>
+
+      <a href="#sobre" class="hero__scroll" aria-label="Rolar para a próxima seção">
+        <span>Role</span><i aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <!-- 02 SOBRE NÓS -->
+    <section class="section about" id="sobre">
+      <div class="container">
+        <div class="about__intro">
+          <div class="about__badge" data-reveal>
+            <span class="about__corner about__corner--tl" aria-hidden="true"></span>
+            <span class="about__corner about__corner--br" aria-hidden="true"></span>
+            <svg class="about__badge-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+            <p class="about__badge-text">Consultoria<br>Comercial em<br>Mobiliário</p>
+          </div>
+          <div class="about__heading" data-reveal>
+            <p class="eyebrow">Sobre nós</p>
+            <h2 class="title">Conheça a Meireles Mobiliário</h2>
+          </div>
+          <div class="about__lead" data-reveal>
+            <p>A <strong>Meireles Mobiliário</strong> nasce com o propósito de aproximar empresas e profissionais de soluções em mobiliário que valorizam ambientes e contribuem para o sucesso de seus negócios.</p>
+            <a href="#consultoria" class="link-arrow">Como funciona nossa consultoria <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+
+        <div class="about__body">
+          <div class="about__media">
+            <figure class="about__img about__img--main" data-clip>
+              <img src="assets/img/sobre-1.webp" alt="Salão de restaurante com mesas de madeira e cadeiras estofadas" width="900" height="1100" loading="lazy" decoding="async">
+            </figure>
+            <figure class="about__img about__img--small" data-clip>
+              <img src="assets/img/sobre-2.webp" alt="Mesa de jantar de madeira com cadeiras em ambiente iluminado" width="700" height="700" loading="lazy" decoding="async">
+            </figure>
+          </div>
+
+          <div class="about__text" data-stagger>
+            <div class="about__block">
+              <span class="about__num">01</span>
+              <h3>Consultoria especializada</h3>
+              <p>Atuamos com consultoria comercial especializada, buscando compreender as necessidades de cada cliente e apresentar opções de mobiliário que aliam qualidade, design e funcionalidade.</p>
+            </div>
+            <div class="about__block">
+              <span class="about__num">02</span>
+              <h3>Conexão com a fábrica</h3>
+              <p>Em parceria com a Marco Brum, conectamos nosso atendimento consultivo à experiência e ao portfólio de uma fabricante especializada em mobiliário para ambientes profissionais e comerciais.</p>
+            </div>
+            <div class="about__block">
+              <span class="about__num">03</span>
+              <h3>Atendimento próximo</h3>
+              <p>Mais do que apresentar produtos, buscamos entender cada projeto e proporcionar uma experiência de atendimento próxima, personalizada e orientada às necessidades de cada negócio.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="partner" data-reveal>
+          <div class="partner__label">
+            <p class="eyebrow">Em parceria com</p>
+            <!-- Substituir pela logomarca oficial da Marco Brum quando disponível -->
+            <p class="partner__logo" aria-label="Marco Brum Móveis">
+              <span class="partner__logo-name">Marco Brum</span>
+              <span class="partner__logo-sub">Móveis</span>
+            </p>
+          </div>
+          <p class="partner__text">Uma parceria que conecta consultoria especializada, qualidade de fabricação e soluções em mobiliário para o mercado profissional.</p>
+          <a class="btn btn--outline-dark" data-wa="Olá! Gostaria de conhecer melhor o portfólio da Marco Brum com a consultoria da Meireles." target="_blank" rel="noopener">
+            Fale com um especialista <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 PRODUTOS -->
+    <section class="section products" id="produtos">
+      <div class="blueprint" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <p class="eyebrow eyebrow--light">Produtos</p>
+            <h2 class="title title--light">Conheça nossas categorias</h2>
+          </div>
+          <p class="section-head__text">Uma seleção do portfólio Marco Brum para compor ambientes profissionais com qualidade, conforto e identidade. Consulte a disponibilidade de cada linha com nossa equipe.</p>
+        </div>
+
+        <div class="products__grid" data-stagger>
+          <article class="product">
+            <img src="assets/img/prod-mesas.webp" alt="Mesa de madeira com cadeiras" width="700" height="960" loading="lazy" decoding="async">
+            <div class="product__body">
+              <h3 class="product__title">Mesas</h3>
+              <p class="product__desc">Versatilidade, resistência e design para salões, varandas e áreas de convivência.</p>
+              <a class="product__cta" data-wa="Olá! Gostaria de conhecer as opções de mesas disponíveis e receber mais informações." target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="product">
+            <img src="assets/img/prod-bistros.webp" alt="Mesa bistrô redonda junto à janela de uma cafeteria" width="700" height="960" loading="lazy" decoding="async">
+            <div class="product__body">
+              <h3 class="product__title">Bistrôs</h3>
+              <p class="product__desc">Peças práticas e elegantes que otimizam espaços e criam ambientes acolhedores.</p>
+              <a class="product__cta" data-wa="Olá! Gostaria de conhecer as opções de bistrôs disponíveis e receber mais informações." target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="product">
+            <img src="assets/img/prod-cadeiras.webp" alt="Cadeiras estofadas ao redor de mesa de jantar" width="700" height="960" loading="lazy" decoding="async">
+            <div class="product__body">
+              <h3 class="product__title">Cadeiras</h3>
+              <p class="product__desc">Conforto, durabilidade e estilo em modelos para os mais diversos ambientes.</p>
+              <a class="product__cta" data-wa="Olá! Gostaria de conhecer as opções de cadeiras disponíveis e receber mais informações." target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="product">
+            <img src="assets/img/prod-importados.webp" alt="Poltrona estofada de linha importada" width="700" height="960" loading="lazy" decoding="async">
+            <div class="product__body">
+              <h3 class="product__title">Linha Importados</h3>
+              <p class="product__desc">Design diferenciado e acabamentos exclusivos para projetos que pedem presença.</p>
+              <a class="product__cta" data-wa="Olá! Gostaria de conhecer as opções da Linha Importados disponíveis e receber mais informações." target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="product">
+            <img src="assets/img/prod-banquetas.webp" alt="Banqueta alta com assento preto e pés de madeira" width="700" height="960" loading="lazy" decoding="async">
+            <div class="product__body">
+              <h3 class="product__title">Banquetas</h3>
+              <p class="product__desc">Funcionalidade e personalidade para balcões, bares e bancadas.</p>
+              <a class="product__cta" data-wa="Olá! Gostaria de conhecer as opções de banquetas disponíveis e receber mais informações." target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="product">
+            <img src="assets/img/prod-booths.webp" alt="Booth estofado em restaurante com plantas" width="700" height="960" loading="lazy" decoding="async">
+            <div class="product__body">
+              <h3 class="product__title">Booths</h3>
+              <p class="product__desc">Estofados sob medida que aproveitam o espaço e ampliam o conforto dos clientes.</p>
+              <a class="product__cta" data-wa="Olá! Gostaria de conhecer as opções de booths disponíveis e receber mais informações." target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="product">
+            <img src="assets/img/prod-aparadores.webp" alt="Aparador rústico de madeira de demolição" width="700" height="960" loading="lazy" decoding="async">
+            <div class="product__body">
+              <h3 class="product__title">Demolição e Aparadores</h3>
+              <p class="product__desc">Madeira com história, charme e identidade para ambientes marcantes.</p>
+              <a class="product__cta" data-wa="Olá! Gostaria de conhecer as opções de móveis de demolição e aparadores disponíveis e receber mais informações." target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="product product--cta">
+            <div class="product__body">
+              <svg class="product__mark" aria-hidden="true"><use href="#i-logo"/></svg>
+              <h3 class="product__title">Tem um projeto em mãos?</h3>
+              <p class="product__desc">Envie a planta ou as referências do seu ambiente e receba uma orientação personalizada.</p>
+              <a class="btn btn--gold btn--sm" data-wa="Olá! Gostaria de enviar meu projeto para receber uma orientação sobre o mobiliário." target="_blank" rel="noopener">Envie seu projeto <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 SOLUÇÕES POR SEGMENTO -->
+    <section class="section segments" id="solucoes">
+      <div class="container">
+        <div class="section-head section-head--dark" data-reveal>
+          <div>
+            <p class="eyebrow">Soluções por segmento</p>
+            <h2 class="title">Mobiliário ideal para o seu tipo de negócio</h2>
+          </div>
+          <p class="section-head__text">Cada negócio possui características e necessidades específicas. Por isso, apresentamos soluções em mobiliário que valorizam os ambientes, proporcionam funcionalidade e contribuem para a identidade de cada estabelecimento.</p>
+        </div>
+
+        <div class="segments__grid" data-stagger>
+          <a class="segment segment--wide" data-wa="Olá! Tenho um restaurante ou churrascaria e gostaria de conhecer soluções em mobiliário." target="_blank" rel="noopener">
+            <img src="assets/img/seg-restaurantes.webp" alt="Salão de restaurante com iluminação baixa" width="800" height="600" loading="lazy" decoding="async">
+            <span class="segment__label">Restaurantes e Churrascarias</span>
+          </a>
+          <a class="segment" data-wa="Olá! Tenho um bar ou pub e gostaria de conhecer soluções em mobiliário." target="_blank" rel="noopener">
+            <img src="assets/img/seg-bares.webp" alt="Balcão de bar com banquetas e iluminação quente" width="800" height="600" loading="lazy" decoding="async">
+            <span class="segment__label">Bares e Pubs</span>
+          </a>
+          <a class="segment" data-wa="Olá! Tenho uma cafeteria ou lanchonete e gostaria de conhecer soluções em mobiliário." target="_blank" rel="noopener">
+            <img src="assets/img/seg-cafeterias.webp" alt="Interior de cafeteria com mesas de madeira" width="800" height="600" loading="lazy" decoding="async">
+            <span class="segment__label">Cafeterias e Lanchonetes</span>
+          </a>
+          <a class="segment" data-wa="Olá! Tenho uma padaria ou pizzaria e gostaria de conhecer soluções em mobiliário." target="_blank" rel="noopener">
+            <img src="assets/img/seg-padarias.webp" alt="Balcão movimentado de padaria e café" width="800" height="600" loading="lazy" decoding="async">
+            <span class="segment__label">Padarias e Pizzarias</span>
+          </a>
+          <a class="segment segment--wide" data-wa="Olá! Tenho um hotel ou pousada e gostaria de conhecer soluções em mobiliário." target="_blank" rel="noopener">
+            <img src="assets/img/seg-hoteis.webp" alt="Quarto de hotel com móveis de madeira" width="800" height="600" loading="lazy" decoding="async">
+            <span class="segment__label">Hotéis e Pousadas</span>
+          </a>
+          <a class="segment" data-wa="Olá! Gostaria de conhecer soluções em mobiliário para espaços corporativos." target="_blank" rel="noopener">
+            <img src="assets/img/seg-corporativos.webp" alt="Escritório amplo com mesa de reunião" width="800" height="600" loading="lazy" decoding="async">
+            <span class="segment__label">Espaços Corporativos</span>
+          </a>
+          <a class="segment segment--wide" data-wa="Olá! Gostaria de conhecer soluções em mobiliário para ambientes comerciais." target="_blank" rel="noopener">
+            <img src="assets/img/seg-comerciais.webp" alt="Lounge comercial com poltronas e sofás" width="800" height="600" loading="lazy" decoding="async">
+            <span class="segment__label">Ambientes Comerciais</span>
+          </a>
+          <a class="segment segment--wide" data-wa="Olá! Sou arquiteto ou designer de interiores e gostaria de conhecer soluções em mobiliário para meus projetos." target="_blank" rel="noopener">
+            <img src="assets/img/seg-arquitetura.webp" alt="Ambiente projetado com sofá, poltronas e mesa de centro" width="800" height="600" loading="lazy" decoding="async">
+            <span class="segment__label">Projetos de Arquitetura e Interiores</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 CONSULTORIA -->
+    <section class="section consulting" id="consultoria">
+      <div class="blueprint" aria-hidden="true"></div>
+      <div class="container">
+        <div class="consulting__top">
+          <div class="consulting__intro" data-reveal>
+            <p class="eyebrow eyebrow--light">Consultoria comercial</p>
+            <h2 class="title title--light">Mais do que encontrar móveis, encontre as <em>soluções certas</em> para o seu negócio.</h2>
+            <p>Cada ambiente possui necessidades específicas. Nossa consultoria busca compreender as características do seu negócio, identificar suas necessidades e apresentar soluções em mobiliário alinhadas ao seu projeto.</p>
+            <p>Por meio de um atendimento personalizado e da conexão com os produtos da Marco Brum, auxiliamos empresas e profissionais na escolha do mobiliário ideal, proporcionando acesso direto à fábrica e acompanhamento comercial durante o processo de aquisição.</p>
+            <a class="btn btn--gold" data-wa="Olá! Gostaria de falar com um consultor da Meireles Mobiliário." target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-whatsapp"/></svg> Fale com um consultor
+            </a>
+          </div>
+          <figure class="consulting__img" data-clip>
+            <img src="assets/img/consultoria.webp" alt="Profissional analisando a planta de um projeto" width="900" height="1100" loading="lazy" decoding="async">
+          </figure>
+        </div>
+
+        <ol class="steps" data-stagger>
+          <li class="step">
+            <span class="step__icon"><svg aria-hidden="true"><use href="#i-listen"/></svg></span>
+            <span class="step__num">Etapa 01</span>
+            <h3>Entendimento da necessidade</h3>
+            <p>Identificação do segmento, das características do ambiente e das necessidades do cliente.</p>
+          </li>
+          <li class="step">
+            <span class="step__icon"><svg aria-hidden="true"><use href="#i-chair"/></svg></span>
+            <span class="step__num">Etapa 02</span>
+            <h3>Apresentação das soluções</h3>
+            <p>Orientação e apresentação das categorias e opções de mobiliário disponíveis.</p>
+          </li>
+          <li class="step">
+            <span class="step__icon"><svg aria-hidden="true"><use href="#i-budget"/></svg></span>
+            <span class="step__num">Etapa 03</span>
+            <h3>Consulta e orçamento</h3>
+            <p>Encaminhamento da solicitação comercial para apresentação das condições de compra.</p>
+          </li>
+          <li class="step">
+            <span class="step__icon"><svg aria-hidden="true"><use href="#i-handshake"/></svg></span>
+            <span class="step__num">Etapa 04</span>
+            <h3>Acompanhamento comercial</h3>
+            <p>Continuidade do relacionamento e suporte durante todo o processo de negociação.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAIXA CTA -->
+    <section class="cta-band" aria-label="Solicite atendimento">
+      <div class="cta-band__bg" aria-hidden="true">
+        <img src="assets/img/cta-band.webp" alt="" width="1680" height="800" loading="lazy" decoding="async">
+      </div>
+      <div class="container cta-band__inner" data-reveal>
+        <p class="eyebrow eyebrow--light">Atendimento em todo o território nacional</p>
+        <h2 class="cta-band__title">Seu próximo ambiente começa com uma boa conversa</h2>
+        <div class="cta-band__actions">
+          <a class="btn btn--gold" data-wa="Olá! Gostaria de solicitar um atendimento da Meireles Mobiliário." target="_blank" rel="noopener">Solicite atendimento <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a href="#produtos" class="btn btn--ghost">Conheça nossas categorias</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 CONTATO -->
+    <section class="section contact" id="contato">
+      <div class="container contact__grid">
+        <div class="contact__info" data-reveal>
+          <p class="eyebrow">Contato</p>
+          <h2 class="title">Vamos encontrar a solução ideal para o seu negócio?</h2>
+          <p class="contact__lead">Entre em contato com a Meireles Mobiliário e conheça as possibilidades de mobiliário para transformar seu ambiente comercial.</p>
+
+          <ul class="contact__list">
+            <li>
+              <a data-wa="Olá! Vim pelo site da Meireles Mobiliário." target="_blank" rel="noopener">
+                <span class="contact__icon"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+                <span><small>WhatsApp comercial</small><strong data-contact-text="whatsapp">(31) 9 9999-9999</strong></span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+553133333333" data-contact="phone">
+                <span class="contact__icon"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+                <span><small>Telefone</small><strong data-contact-text="phone">(31) 3333-3333</strong></span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:contato@meirelesmobiliario.com.br" data-contact="email">
+                <span class="contact__icon"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
+                <span><small>E-mail</small><strong data-contact-text="email">contato@meirelesmobiliario.com.br</strong></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/meirelesmobiliario" target="_blank" rel="noopener" data-contact="instagram">
+                <span class="contact__icon"><svg aria-hidden="true"><use href="#i-instagram"/></svg></span>
+                <span><small>Instagram</small><strong data-contact-text="instagram">@meirelesmobiliario</strong></span>
+              </a>
+            </li>
+            <li>
+              <div>
+                <span class="contact__icon"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
+                <span><small>Localização</small><strong data-contact-text="location">Belo Horizonte, MG</strong></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact__form-wrap" data-reveal>
+          <form class="form" id="contactForm" novalidate>
+            <h3 class="form__title">Solicite atendimento</h3>
+            <p class="form__hint">Preencha os campos e nossa equipe retorna o contato.</p>
+
+            <div class="form__grid">
+              <div class="field">
+                <label for="f-nome">Nome *</label>
+                <input id="f-nome" name="nome" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="f-empresa">Empresa</label>
+                <input id="f-empresa" name="empresa" type="text" autocomplete="organization">
+              </div>
+              <div class="field">
+                <label for="f-whats">WhatsApp *</label>
+                <input id="f-whats" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(00) 0 0000-0000" required>
+              </div>
+              <div class="field">
+                <label for="f-email">E-mail *</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="f-cidade">Cidade/Estado *</label>
+                <input id="f-cidade" name="cidade" type="text" autocomplete="address-level2" placeholder="Ex.: Belo Horizonte/MG" required>
+              </div>
+              <div class="field">
+                <label for="f-segmento">Segmento de atuação *</label>
+                <select id="f-segmento" name="segmento" required>
+                  <option value="" selected disabled>Selecione</option>
+                  <option>Restaurante</option>
+                  <option>Churrascaria</option>
+                  <option>Bar ou pub</option>
+                  <option>Cafeteria ou lanchonete</option>
+                  <option>Padaria ou pizzaria</option>
+                  <option>Hotel ou pousada</option>
+                  <option>Escritório</option>
+                  <option>Ambiente comercial</option>
+                  <option>Projeto de arquitetura</option>
+                  <option>Outros</option>
+                </select>
+              </div>
+              <div class="field field--full">
+                <label for="f-msg">Descreva sua necessidade</label>
+                <textarea id="f-msg" name="mensagem" rows="4" placeholder="Conte um pouco sobre o seu ambiente, quantidades e prazos"></textarea>
+              </div>
+            </div>
+
+            <!-- campo anti-spam, não preencher -->
+            <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <button type="submit" class="btn btn--gold btn--block">
+              <span class="btn__label">Solicitar atendimento</span>
+              <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="form-success" id="formSuccess" hidden tabindex="-1">
+            <span class="form-success__icon"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
+            <h3>Solicitação recebida</h3>
+            <p>Obrigado pelo contato. Nossa equipe vai analisar sua necessidade e retornar em breve.</p>
+            <button type="button" class="link-arrow" id="formReset">Enviar nova solicitação <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container footer__top">
+      <a href="#inicio" class="brand brand--footer" aria-label="Meireles Mobiliário, voltar ao início">
+        <svg class="brand__mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="brand__words">
+          <span class="brand__name">Meireles</span>
+          <span class="brand__sub">Mobiliário</span>
+        </span>
+      </a>
+      <nav aria-label="Menu do rodapé">
+        <ul class="footer__nav">
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#solucoes">Soluções</a></li>
+          <li><a href="#consultoria">Consultoria</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="footer__partner">
+        <span>Em parceria com</span>
+        <span class="partner__logo partner__logo--sm"><span class="partner__logo-name">Marco Brum</span><span class="partner__logo-sub">Móveis</span></span>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>Consultoria Comercial em Mobiliário. Atendimento em todo o território nacional.</p>
+      <p>&copy; <span id="year">2026</span> Meireles Mobiliário. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a class="wa-float" data-wa="Olá! Vim pelo site da Meireles Mobiliário e gostaria de mais informações." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+    <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    <span class="wa-float__tip">Fale conosco</span>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
