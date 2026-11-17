@@ -155,17 +155,52 @@
     if (img) { img.src = img.getAttribute('data-src'); img.removeAttribute('data-src'); }
   }
 
+  var counter = document.querySelector('.hero__count-cur');
+  var animating = false;
+
+  function setActiveDot(i) {
+    dots.forEach(function (d, k) {
+      d.classList.toggle('is-active', k === i);
+      d.setAttribute('aria-selected', String(k === i));
+    });
+    if (counter) {
+      counter.textContent = (i < 9 ? '0' : '') + (i + 1);
+      if (window.gsap && !reduceMotion) {
+        window.gsap.fromTo(counter, { yPercent: 100, autoAlpha: 0 }, { yPercent: 0, autoAlpha: 1, duration: 0.8, ease: 'expo.out' });
+      }
+    }
+  }
+
   function goTo(i) {
-    if (i === current) return;
+    if (i === current || animating) return;
     loadSlide(slides[i]);
-    slides[current].classList.remove('is-active');
-    dots[current].classList.remove('is-active');
-    dots[current].setAttribute('aria-selected', 'false');
+    var prev = slides[current];
+    var next = slides[i];
     current = i;
-    slides[current].classList.add('is-active');
-    dots[current].classList.add('is-active');
-    dots[current].setAttribute('aria-selected', 'true');
+    setActiveDot(i);
     restart();
+
+    if (window.gsap && !reduceMotion) {
+      var gsap = window.gsap;
+      var img = next.querySelector('img');
+      animating = true;
+      next.classList.add('is-entering');
+      gsap.fromTo(img, { scale: 1.32, xPercent: -5 }, { scale: 1.14, xPercent: 0, duration: 1.8, ease: 'expo.out' });
+      gsap.fromTo(next, { clipPath: 'inset(0% 0% 0% 100%)' }, {
+        clipPath: 'inset(0% 0% 0% 0%)', duration: 1.5, ease: 'expo.inOut',
+        onComplete: function () {
+          next.classList.add('is-active');
+          next.classList.remove('is-entering');
+          prev.classList.remove('is-active');
+          gsap.set(next, { clearProps: 'clipPath' });
+          gsap.set(img, { clearProps: 'transform' });
+          animating = false;
+        }
+      });
+    } else {
+      prev.classList.remove('is-active');
+      next.classList.add('is-active');
+    }
   }
   function restart() {
     clearInterval(timer);
@@ -222,17 +257,36 @@
   splitWords(heroTitle);
   var heroItems = document.querySelectorAll('[data-hero]');
 
-  gsap.set([heroTitle, '.hero__dots', '.hero__scroll'], { visibility: 'visible' });
+  gsap.set([heroTitle, '.hero__nav', '.hero__scroll', '.hero__ticker'], { visibility: 'visible' });
   var intro = gsap.timeline({ defaults: { ease: 'expo.out' }, delay: 0.15 });
   intro
     .from('.hero__slides', { scale: 1.12, duration: 2.4, ease: 'power3.out' }, 0)
-    .fromTo('.hero__mark', { autoAlpha: 0, y: 24, scale: 0.7 }, { autoAlpha: 1, y: 0, scale: 1, duration: 1.4 }, 0.2)
+    .set('.hero__mark', { autoAlpha: 1 }, 0.2)
+    .fromTo('.hero__mark path', { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 1.6, stagger: 0.18, ease: 'power2.inOut' }, 0.2)
     .fromTo(heroItems[1], { autoAlpha: 0, y: 20, letterSpacing: '0.5em' }, { autoAlpha: 1, y: 0, letterSpacing: '0.24em', duration: 1.6 }, 0.35)
     .from('.hero__title .split-word', { yPercent: 115, rotate: 4, duration: 1.4, stagger: 0.07 }, 0.5)
     .fromTo(heroItems[2], { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 1.2 }, 1.15)
     .fromTo(heroItems[3], { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 1.2 }, 1.3)
-    .from('.hero__dots, .hero__scroll', { autoAlpha: 0, y: 20, duration: 1 }, 1.5)
+    .from('.hero__nav, .hero__scroll', { autoAlpha: 0, y: 20, duration: 1 }, 1.5)
+    .from('.hero__ticker', { yPercent: 100, autoAlpha: 0, duration: 1.2 }, 1.4)
     .from('.navbar__inner > *', { autoAlpha: 0, y: -20, duration: 1, stagger: 0.08, clearProps: 'opacity,visibility,transform' }, 0.4);
+
+  // Parallax do hero acompanhando o mouse
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var hero = document.querySelector('.hero');
+    var bgX = gsap.quickTo('.hero__slides', 'x', { duration: 1.2, ease: 'power3.out' });
+    var bgY = gsap.quickTo('.hero__slides', 'y', { duration: 1.2, ease: 'power3.out' });
+    var fgX = gsap.quickTo('.hero__content', 'x', { duration: 1.4, ease: 'power3.out' });
+    var fgY = gsap.quickTo('.hero__content', 'y', { duration: 1.4, ease: 'power3.out' });
+    hero.addEventListener('mousemove', function (e) {
+      var r = hero.getBoundingClientRect();
+      var nx = (e.clientX - r.left) / r.width - 0.5;
+      var ny = (e.clientY - r.top) / r.height - 0.5;
+      bgX(nx * -26); bgY(ny * -18);
+      fgX(nx * 10); fgY(ny * 6);
+    });
+    hero.addEventListener('mouseleave', function () { bgX(0); bgY(0); fgX(0); fgY(0); });
+  }
 
   // Parallax do hero ao rolar
   gsap.to('.hero__content', {
