@@ -154,15 +154,15 @@
       <div class="hero__slides" aria-hidden="true">
         <picture class="hero__slide is-active">
           <source media="(max-width: 767px)" srcset="assets/img/hero-1-m.webp">
-          <img src="assets/img/hero-1.webp" alt="" width="1680" height="1050" fetchpriority="high">
+          <img src="assets/img/hero-1.webp" alt="" width="1600" height="1000" fetchpriority="high">
         </picture>
         <picture class="hero__slide">
           <source media="(max-width: 767px)" data-srcset="assets/img/hero-2-m.webp">
-          <img data-src="assets/img/hero-2.webp" alt="" width="1680" height="1050">
+          <img data-src="assets/img/hero-2.webp" alt="" width="1600" height="1000">
         </picture>
         <picture class="hero__slide">
           <source media="(max-width: 767px)" data-srcset="assets/img/hero-3-m.webp">
-          <img data-src="assets/img/hero-3.webp" alt="" width="1680" height="1050">
+          <img data-src="assets/img/hero-3.webp" alt="" width="1920" height="1200">
         </picture>
       </div>
       <div class="hero__shade" aria-hidden="true"></div>
@@ -224,10 +224,10 @@
         <div class="about__body">
           <div class="about__media">
             <figure class="about__img about__img--main" data-clip>
-              <img src="assets/img/sobre-1.webp" alt="Salão de restaurante com mesas de madeira e cadeiras estofadas" width="900" height="1100" loading="lazy" decoding="async">
+              <img src="assets/img/sobre-1.webp" alt="Salão de restaurante com cadeiras estofadas, bancos e adega iluminada" width="900" height="1100" loading="lazy" decoding="async">
             </figure>
             <figure class="about__img about__img--small" data-clip>
-              <img src="assets/img/sobre-2.webp" alt="Mesa de jantar de madeira com cadeiras em ambiente iluminado" width="700" height="700" loading="lazy" decoding="async">
+              <img src="assets/img/sobre-2.webp" alt="Mesa de madeira com cadeiras de encosto alto em salão de restaurante" width="700" height="700" loading="lazy" decoding="async">
             </figure>
           </div>
 
@@ -254,11 +254,7 @@
         <div class="partner" data-reveal>
           <div class="partner__label">
             <p class="eyebrow">Em parceria com</p>
-            <!-- Substituir pela logomarca oficial da Marco Brum quando disponível -->
-            <p class="partner__logo" aria-label="Marco Brum Móveis">
-              <span class="partner__logo-name">Marco Brum</span>
-              <span class="partner__logo-sub">Móveis</span>
-            </p>
+            <img class="partner__logo" src="assets/img/marco-brum.webp" alt="Marco Brum Móveis" width="440" height="216" loading="lazy" decoding="async">
           </div>
           <p class="partner__text">Uma parceria que conecta consultoria especializada, qualidade de fabricação e soluções em mobiliário para o mercado profissional.</p>
           <a class="btn btn--outline-dark" data-wa="Olá! Gostaria de conhecer melhor o portfólio da Marco Brum com a consultoria da Meireles." target="_blank" rel="noopener">
@@ -284,7 +280,7 @@
       <div class="carousel" data-carousel>
         <div class="carousel__track" tabindex="0" role="region" aria-label="Categorias de produtos, role para o lado para ver mais" data-stagger>
           <article class="product">
-            <img src="assets/img/prod-mesas.webp" alt="Mesa de madeira com cadeiras" width="700" height="960" loading="lazy" decoding="async" draggable="false">
+            <div class="product__media"><img src="assets/img/prod-mesas.webp" alt="Mesa Star de madeira com base de pés cruzados" width="640" height="720" loading="lazy" decoding="async" draggable="false"></div>
             <div class="product__body">
               <span class="product__index">01</span>
               <h3 class="product__title">Mesas</h3>
@@ -293,7 +289,7 @@
             </div>
           </article>
           <article class="product">
-            <img src="assets/img/prod-bistros.webp" alt="Mesa bistrô redonda junto à janela de uma cafeteria" width="700" height="960" loading="lazy" decoding="async" draggable="false">
+            <div class="product__media"><img src="assets/img/prod-bistros.webp" alt="Mesa bistrô Nantes com tampo redondo e pé torneado" width="640" height="720" loading="lazy" decoding="async" draggable="false"></div>
             <div class="product__body">
               <span class="product__index">02</span>
               <h3 class="product__title">Bistrôs</h3>
@@ -302,7 +298,7 @@
             </div>
           </article>
           <article class="product">
-            <img src="assets/img/prod-cadeiras.webp" alt="Cadeiras estofadas ao redor de mesa de jantar" width="700" height="960" loading="lazy" decoding="async" draggable="false">
+            <div class="product__media"><img src="assets/img/prod-cadeiras.webp" alt="Cadeira França de madeira com encosto em X" width="640" height="720" loading="lazy" decoding="async" draggable="false"></div>
             <div class="product__body">
               <span class="product__index">03</span>
               <h3 class="product__title">Cadeiras</h3>
@@ -311,7 +307,7 @@
             </div>
           </article>
           <article class="product">
-            <img src="assets/img/prod-importados.webp" alt="Poltrona estofada de linha importada" width="700" height="960" loading="lazy" decoding="async" draggable="false">
+            <div class="product__media"><img src="assets/img/prod-importados.webp" alt="Cadeira Mykonos verde musgo da linha importados" width="640" height="720" loading="lazy" decoding="async" draggable="false"></div>
             <div class="product__body">
               <span class="product__index">04</span>
               <h3 class="product__title">Linha Importados</h3>
@@ -320,7 +316,7 @@
             </div>
           </article>
           <article class="product">
-            <img src="assets/img/prod-banquetas.webp" alt="Banqueta alta com assento preto e pés de madeira" width="700" height="960" loading="lazy" decoding="async" draggable="false">
+            <div class="product__media"><img src="assets/img/prod-banquetas.webp" alt="Banqueta Marrocos de madeira com assento estofado" width="640" height="720" loading="lazy" decoding="async" draggable="false"></div>
             <div class="product__body">
               <span class="product__index">05</span>
               <h3 class="product__title">Banquetas</h3>
@@ -329,7 +325,7 @@
             </div>
           </article>
           <article class="product">
-            <img src="assets/img/prod-booths.webp" alt="Booth estofado em restaurante com plantas" width="700" height="960" loading="lazy" decoding="async" draggable="false">
+            <div class="product__media product__media--photo"><img src="assets/img/prod-booths.webp" alt="Booth estofado verde com mesas de madeira em restaurante" width="640" height="720" loading="lazy" decoding="async" draggable="false"></div>
             <div class="product__body">
               <span class="product__index">06</span>
               <h3 class="product__title">Booths</h3>
@@ -338,7 +334,7 @@
             </div>
           </article>
           <article class="product">
-            <img src="assets/img/prod-aparadores.webp" alt="Aparador rústico de madeira de demolição" width="700" height="960" loading="lazy" decoding="async" draggable="false">
+            <div class="product__media product__media--photo"><img src="assets/img/prod-aparadores.webp" alt="Mesa rústica de madeira com cadeiras diante de adega" width="640" height="720" loading="lazy" decoding="async" draggable="false"></div>
             <div class="product__body">
               <span class="product__index">07</span>
               <h3 class="product__title">Demolição e Aparadores</h3>
@@ -379,7 +375,7 @@
 
         <div class="panels" data-panels data-reveal>
           <article class="panel is-active" tabindex="0">
-            <img src="assets/img/seg-restaurantes.webp" alt="Salão de restaurante com iluminação baixa" width="800" height="600" loading="lazy" decoding="async">
+            <img src="assets/img/seg-restaurantes.webp" alt="Salão de restaurante com mesas redondas e cadeiras de madeira" width="1000" height="1250" loading="lazy" decoding="async">
             <span class="panel__tab"><b>01</b>Restaurantes e Churrascarias</span>
             <div class="panel__content">
               <span class="panel__num">01</span>
@@ -389,7 +385,7 @@
             </div>
           </article>
           <article class="panel" tabindex="0">
-            <img src="assets/img/seg-bares.webp" alt="Balcão de bar com banquetas e iluminação quente" width="800" height="600" loading="lazy" decoding="async">
+            <img src="assets/img/seg-bares.webp" alt="Bar com mesas e cadeiras de madeira e painel artístico na parede" width="1000" height="1250" loading="lazy" decoding="async">
             <span class="panel__tab"><b>02</b>Bares e Pubs</span>
             <div class="panel__content">
               <span class="panel__num">02</span>
@@ -399,7 +395,7 @@
             </div>
           </article>
           <article class="panel" tabindex="0">
-            <img src="assets/img/seg-cafeterias.webp" alt="Interior de cafeteria com mesas de madeira" width="800" height="600" loading="lazy" decoding="async">
+            <img src="assets/img/seg-cafeterias.webp" alt="Cafeteria clara com mesas redondas e cadeiras Mykonos" width="1000" height="1000" loading="lazy" decoding="async">
             <span class="panel__tab"><b>03</b>Cafeterias e Lanchonetes</span>
             <div class="panel__content">
               <span class="panel__num">03</span>
@@ -409,7 +405,7 @@
             </div>
           </article>
           <article class="panel" tabindex="0">
-            <img src="assets/img/seg-padarias.webp" alt="Balcão movimentado de padaria e café" width="800" height="600" loading="lazy" decoding="async">
+            <img src="assets/img/seg-padarias.webp" alt="Pizzaria com mesas de madeira e cadeiras com assento verde" width="1000" height="1250" loading="lazy" decoding="async">
             <span class="panel__tab"><b>04</b>Padarias e Pizzarias</span>
             <div class="panel__content">
               <span class="panel__num">04</span>
@@ -419,7 +415,7 @@
             </div>
           </article>
           <article class="panel" tabindex="0">
-            <img src="assets/img/seg-hoteis.webp" alt="Quarto de hotel com móveis de madeira" width="800" height="600" loading="lazy" decoding="async">
+            <img src="assets/img/seg-hoteis.webp" alt="Ambiente rústico de pousada com parede de pedra e mesas de madeira" width="854" height="1067" loading="lazy" decoding="async">
             <span class="panel__tab"><b>05</b>Hotéis e Pousadas</span>
             <div class="panel__content">
               <span class="panel__num">05</span>
@@ -429,7 +425,7 @@
             </div>
           </article>
           <article class="panel" tabindex="0">
-            <img src="assets/img/seg-corporativos.webp" alt="Escritório amplo com mesa de reunião" width="800" height="600" loading="lazy" decoding="async">
+            <img src="assets/img/seg-corporativos.webp" alt="Copa corporativa com mesa, cadeiras e banquetas Positano" width="1000" height="1000" loading="lazy" decoding="async">
             <span class="panel__tab"><b>06</b>Espaços Corporativos</span>
             <div class="panel__content">
               <span class="panel__num">06</span>
@@ -439,7 +435,7 @@
             </div>
           </article>
           <article class="panel" tabindex="0">
-            <img src="assets/img/seg-comerciais.webp" alt="Lounge comercial com poltronas e sofás" width="800" height="600" loading="lazy" decoding="async">
+            <img src="assets/img/seg-comerciais.webp" alt="Grande salão comercial com conjuntos de mesas e cadeiras de madeira" width="1000" height="1000" loading="lazy" decoding="async">
             <span class="panel__tab"><b>07</b>Ambientes Comerciais</span>
             <div class="panel__content">
               <span class="panel__num">07</span>
@@ -449,7 +445,7 @@
             </div>
           </article>
           <article class="panel" tabindex="0">
-            <img src="assets/img/seg-arquitetura.webp" alt="Ambiente projetado com sofá, poltronas e mesa de centro" width="800" height="600" loading="lazy" decoding="async">
+            <img src="assets/img/seg-arquitetura.webp" alt="Sala de jantar projetada com mesa redonda e cadeiras Positano" width="800" height="1000" loading="lazy" decoding="async">
             <span class="panel__tab"><b>08</b>Arquitetura e Interiores</span>
             <div class="panel__content">
               <span class="panel__num">08</span>
@@ -477,7 +473,7 @@
             </a>
           </div>
           <figure class="consulting__img" data-clip>
-            <img src="assets/img/consultoria.webp" alt="Profissional analisando a planta de um projeto" width="900" height="1100" loading="lazy" decoding="async">
+            <img src="assets/img/consultoria.webp" alt="Salão de restaurante com mesas de madeira, bancos e escada metálica" width="900" height="1125" loading="lazy" decoding="async">
           </figure>
         </div>
 
@@ -651,7 +647,7 @@
         <p class="footer__about">Consultoria comercial em mobiliário para empresas e profissionais, com atendimento em todo o território nacional.</p>
         <div class="footer__partner">
           <span>Em parceria com</span>
-          <span class="partner__logo partner__logo--sm"><span class="partner__logo-name">Marco Brum</span><span class="partner__logo-sub">Móveis</span></span>
+          <img class="partner__logo partner__logo--sm" src="assets/img/marco-brum-claro.webp" alt="Marco Brum Móveis" width="440" height="217" loading="lazy" decoding="async">
         </div>
       </div>
 

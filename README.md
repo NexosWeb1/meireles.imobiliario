@@ -18,9 +18,8 @@ assets/img/           imagens otimizadas em WebP
 
 1. Os contatos ficam em `assets/js/config.js`. WhatsApp, telefone e e-mail já estão com os dados reais. Instagram e localização estão vazios e por isso ficam ocultos no site; basta preenchê-los para que apareçam.
 2. Defina o canal de recebimento do formulário em `formEndpoint` (Formspree, Getform, FormSubmit ou API própria que aceite POST em JSON). Sem endpoint, a solicitação é encaminhada para o WhatsApp comercial já preenchida.
-3. Substitua a logomarca provisória pelo arquivo oficial. Ela está desenhada como símbolo `#i-logo` no topo do `index.html` e em `assets/img/favicon.svg`.
-4. Substitua o nome da Marco Brum pela logomarca oficial da fabricante, quando autorizada (blocos `.partner__logo`).
-5. Troque as fotos provisórias (Unsplash) por imagens reais do portfólio Marco Brum, mantendo os mesmos nomes de arquivo em `assets/img/`.
+3. A logomarca oficial está vetorizada no símbolo `#i-logo` do `index.html` e em `assets/img/favicon.svg`. A logo da Marco Brum fica em `assets/img/marco-brum.webp` (fundo claro) e `marco-brum-claro.webp` (fundo escuro).
+4. As fotos vêm do acervo da Marco Brum (ambientes reais e linha de importados). Para trocar alguma, mantenha o mesmo nome de arquivo em `assets/img/`.
 
 ## Bibliotecas
 
