@@ -145,11 +145,14 @@ strong { font-weight: 700; }
 
 /* ---------- Marca ---------- */
 .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--linen-50); }
-.brand__mark { width: 44px; height: 38px; color: var(--gold); flex-shrink: 0; }
+.brand__mark { width: 50px; height: 35px; fill: url(#g-gold); flex-shrink: 0; }
 .brand__words { display: flex; flex-direction: column; line-height: 1; }
 .brand__name {
   font-family: var(--font-display); font-weight: 600;
   font-size: 27px; letter-spacing: .14em; text-transform: uppercase;
+  color: #DFC08C;
+  background: linear-gradient(90deg, #E4C793, #B08B62); -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .brand__sub {
   font-size: 9.5px; font-weight: 600; letter-spacing: .5em; text-transform: uppercase;
@@ -236,8 +239,8 @@ strong { font-weight: 700; }
   display: flex; flex-direction: column; align-items: center; text-align: center;
   padding-top: calc(var(--header-h) + 40px + 2vh); padding-bottom: 150px;
 }
-.hero__mark { width: 50px; height: 44px; color: var(--gold); margin-bottom: clamp(14px, 2.4vh, 24px); overflow: visible; }
-.hero__mark path { stroke-dasharray: 1; stroke-dashoffset: 0; }
+.hero__mark { width: 66px; height: 46px; margin-bottom: clamp(14px, 2.4vh, 24px); overflow: visible; }
+.hero__mark path { fill: url(#g-gold); stroke: #DFC08C; stroke-width: 0; stroke-dasharray: 1; stroke-dashoffset: 0; }
 .hero__title {
   font-family: var(--font-display); font-weight: 500;
   font-size: clamp(40px, min(6.2vw, 9vh), 92px);
@@ -354,7 +357,7 @@ strong { font-weight: 700; }
 .about__corner { position: absolute; width: 42%; height: 42%; border: 2px solid var(--gold); }
 .about__corner--tl { top: 0; left: 0; border-right: 0; border-bottom: 0; }
 .about__corner--br { bottom: 0; right: 0; border-left: 0; border-top: 0; }
-.about__badge-mark { width: 76px; height: 66px; color: var(--green); }
+.about__badge-mark { width: 84px; height: 59px; fill: var(--green); }
 .about__badge-text {
   margin-top: 14px; font-family: var(--font-display); font-style: italic; font-size: 17px; line-height: 1.25; color: var(--walnut);
 }
@@ -466,7 +469,7 @@ strong { font-weight: 700; }
 .product--cta .product__body { justify-content: center; align-items: flex-start; }
 .product--cta .product__title { color: var(--green-950); padding-right: 0; }
 .product--cta .product__desc { margin-top: 14px; margin-bottom: 26px; color: var(--green-900); }
-.product__mark { width: 48px; height: 42px; color: var(--green-900); margin-bottom: 22px; }
+.product__mark { width: 54px; height: 38px; fill: var(--green-900); margin-bottom: 22px; }
 .product--cta .btn { background: var(--green-950); color: var(--linen-50); }
 .product--cta .btn:hover { background: var(--green); box-shadow: none; }
 
@@ -839,12 +842,12 @@ strong { font-weight: 700; }
 
 @media (max-width: 767px) {
   body { font-size: 15.5px; }
-  .brand__mark { width: 36px; height: 32px; }
+  .brand__mark { width: 42px; height: 29px; }
   .brand__name { font-size: 22px; }
   .brand__sub { font-size: 8.5px; letter-spacing: .44em; }
 
   .hero__content { padding-top: calc(var(--header-h) + 32px); padding-bottom: 140px; }
-  .hero__mark { width: 42px; height: 37px; }
+  .hero__mark { width: 54px; height: 38px; }
   .hero__nav { right: 0; left: 0; justify-content: center; bottom: 74px; }
   .hero__count { display: none; }
   .hero__ticker { height: 50px; }
@@ -856,7 +859,7 @@ strong { font-weight: 700; }
   .section-head__text { justify-self: start; }
 
   .about__badge { width: 160px; margin-bottom: 32px; }
-  .about__badge-mark { width: 62px; height: 54px; }
+  .about__badge-mark { width: 68px; height: 48px; }
   .about__badge-text { font-size: 15px; }
   .about__intro { margin-bottom: 56px; }
   .about__media { padding-right: 36px; padding-bottom: 56px; }

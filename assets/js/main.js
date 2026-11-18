@@ -379,7 +379,8 @@
   intro
     .from('.hero__slides', { scale: 1.12, duration: 2.4, ease: 'power3.out' }, 0)
     .set('.hero__mark', { autoAlpha: 1 }, 0.2)
-    .fromTo('.hero__mark path', { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 1.6, stagger: 0.18, ease: 'power2.inOut' }, 0.2)
+    .fromTo('.hero__mark path', { strokeDashoffset: 1, strokeWidth: 2, fillOpacity: 0 }, { strokeDashoffset: 0, duration: 1.4, stagger: 0.14, ease: 'power2.inOut' }, 0.2)
+    .to('.hero__mark path', { fillOpacity: 1, strokeWidth: 0, duration: 0.7, stagger: 0.08, ease: 'power2.out' }, 1.2)
     .fromTo(heroItems[1], { autoAlpha: 0, y: 20, letterSpacing: '0.5em' }, { autoAlpha: 1, y: 0, letterSpacing: '0.24em', duration: 1.6 }, 0.35)
     .from('.hero__title .split-word', { yPercent: 115, rotate: 4, duration: 1.4, stagger: 0.07 }, 0.5)
     .fromTo(heroItems[2], { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 1.2 }, 1.15)
