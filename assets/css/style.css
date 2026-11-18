@@ -52,6 +52,9 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
+@supports (overflow: clip) {
+  html, body { overflow-x: clip; }
+}
 body.menu-open { overflow: hidden; }
 
 img, picture, svg { display: block; max-width: 100%; }
@@ -320,7 +323,8 @@ strong { font-weight: 700; }
 .hero__slide.is-active { z-index: 1; }
 
 /* palavras do título */
-.split-line { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .08em; margin-bottom: -.08em; }
+.split-line { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 .06em .26em; margin: 0 -.06em -.26em; }
+.split-line.is-open { overflow: visible; }
 .split-word { display: inline-block; will-change: transform; }
 
 /* ---------- Seções ---------- */

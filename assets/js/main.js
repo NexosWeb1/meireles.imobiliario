@@ -382,7 +382,9 @@
     .fromTo('.hero__mark path', { strokeDashoffset: 1, strokeWidth: 2, fillOpacity: 0 }, { strokeDashoffset: 0, duration: 1.4, stagger: 0.14, ease: 'power2.inOut' }, 0.2)
     .to('.hero__mark path', { fillOpacity: 1, strokeWidth: 0, duration: 0.7, stagger: 0.08, ease: 'power2.out' }, 1.2)
     .fromTo(heroItems[1], { autoAlpha: 0, y: 20, letterSpacing: '0.5em' }, { autoAlpha: 1, y: 0, letterSpacing: '0.24em', duration: 1.6 }, 0.35)
-    .from('.hero__title .split-word', { yPercent: 115, rotate: 4, duration: 1.4, stagger: 0.07 }, 0.5)
+    .from('.hero__title .split-word', { yPercent: 115, rotate: 4, duration: 1.4, stagger: 0.07, onComplete: function () {
+      heroTitle.querySelectorAll('.split-line').forEach(function (l) { l.classList.add('is-open'); });
+    } }, 0.5)
     .fromTo(heroItems[2], { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 1.2 }, 1.15)
     .fromTo(heroItems[3], { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 1.2 }, 1.3)
     .from('.hero__nav, .hero__scroll', { autoAlpha: 0, y: 20, duration: 1 }, 1.5)
