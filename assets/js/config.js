@@ -10,7 +10,7 @@ window.MEIRELES_CONFIG = {
   phone: '+5531987619774',
   phoneLabel: '(31) 98761-9774',
 
-  email: 'gislainevendasmarcobrum@gmail.com',
+  email: 'vendasmarcobrum@rh-meireles.com.br',
 
   // Deixe vazio para ocultar o item no site
   instagramUser: '',
