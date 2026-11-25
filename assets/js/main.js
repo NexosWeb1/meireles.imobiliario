@@ -21,7 +21,7 @@
   var contactHref = {
     phone: CFG.phone ? 'tel:' + CFG.phone : null,
     email: CFG.email ? 'mailto:' + CFG.email : null,
-    instagram: CFG.instagramUser ? 'https://instagram.com/' + CFG.instagramUser : null
+    instagram: CFG.instagramUser ? 'https://www.instagram.com/' + CFG.instagramUser + '/' : null
   };
   var contactText = {
     phone: CFG.phoneLabel,

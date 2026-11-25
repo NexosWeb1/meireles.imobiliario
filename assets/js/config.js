@@ -13,7 +13,7 @@ window.MEIRELES_CONFIG = {
   email: 'vendasmarcobrum@rh-meireles.com.br',
 
   // Deixe vazio para ocultar o item no site
-  instagramUser: '',
+  instagramUser: 'meirelesmobiliariomarcobrum',
 
   // Deixe vazio para ocultar o item no site
   location: '',
